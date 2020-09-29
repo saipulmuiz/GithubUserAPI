@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">GithubUserAPI</string>
+    <string name="search">Cari</string>
+    <string name="insert_user">Cari Username...</string>
+    <string name="search_result">Search Result</string>
+    <string name="total_hasil">Total Hasil :</string>
+    <string name="nol">0</string>
+    <string name="id">ID :</string>
+    <string name="id_number">ID Number</string>
+    <string name="nama_user">Nama User</string>
+    <string name="username">\@Username</string>
+    <string name="company">Company</string>
+    <string name="location">Location</string>
+    <string name="n_a">N/A</string>
 </resources>
