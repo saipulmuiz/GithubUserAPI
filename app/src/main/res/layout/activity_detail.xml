@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailActivity">
+    tools:context=".ui.DetailActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -51,6 +51,8 @@
         android:text="@string/nama_user"
         android:textColor="@android:color/black"
         android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/img_foto_user_detail"
         app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
@@ -65,6 +67,8 @@
         android:text="@string/username"
         android:textColor="@color/gray"
         android:textSize="@dimen/font_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/img_foto_user_detail"
         app:layout_constraintTop_toBottomOf="@id/nama" />
 
@@ -74,22 +78,10 @@
         android:layout_height="15dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="5dp"
+        android:contentDescription="@string/company"
         android:src="@drawable/icon_company_dark"
         app:layout_constraintStart_toEndOf="@+id/img_foto_user_detail"
-        app:layout_constraintTop_toBottomOf="@id/tv_username"
-        android:contentDescription="@string/company" />
-
-    <TextView
-        android:id="@+id/tv_company"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:text="@string/company"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/font_10"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/tv_username" />
+        app:layout_constraintTop_toBottomOf="@id/tv_username" />
 
     <ImageView
         android:id="@+id/imgLocation"
@@ -97,29 +89,52 @@
         android:layout_height="15dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="5dp"
+        android:contentDescription="@string/location"
         android:src="@drawable/icon_place_dark"
         app:layout_constraintStart_toEndOf="@id/img_foto_user_detail"
-        app:layout_constraintTop_toBottomOf="@id/imageView"
-        android:contentDescription="@string/location" />
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
 
     <TextView
         android:id="@+id/tv_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="5dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
         android:text="@string/location"
         android:textColor="@android:color/black"
         android:textSize="@dimen/font_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/imgLocation"
         app:layout_constraintTop_toBottomOf="@id/tv_company" />
 
     <TextView
-        android:id="@+id/jml_repository"
+        android:id="@+id/tv_company"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="5dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="@string/company"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/font_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username" />
+
+    <TextView
+        android:id="@+id/jml_repository"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="5dp"
+        android:layout_weight="1"
         android:fontFamily="@font/karla_bold"
         android:gravity="center"
         android:text="@string/n_a"
@@ -130,9 +145,10 @@
 
     <TextView
         android:id="@+id/jml_followers"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
+        android:layout_weight="1"
         android:fontFamily="@font/karla_bold"
         android:gravity="center"
         android:text="@string/n_a"
@@ -143,9 +159,10 @@
 
     <TextView
         android:id="@+id/jml_following"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
+        android:layout_weight="1"
         android:fontFamily="@font/karla_bold"
         android:gravity="center"
         android:text="@string/n_a"
@@ -153,5 +170,28 @@
         android:textSize="@dimen/font_10"
         app:layout_constraintBaseline_toBaselineOf="@id/jml_repository"
         app:layout_constraintStart_toEndOf="@id/jml_followers" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabsRelate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="36dp"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_foto_user_detail"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorHeight="2dp"
+        app:tabMode="fixed"
+        app:tabRippleColor="@null"
+        app:tabTextColor="@android:color/white" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tabsRelate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
