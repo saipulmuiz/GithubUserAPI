@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SMConsumerApp</string>
+    <string name="id">ID :</string>
+    <string name="id_number">ID Number</string>
+    <string name="user_detail_information">Gunakan aplikasi utama untuk lihat detail informasi</string>
+    <string name="user_favorit">User Favorit</string>
+</resources>

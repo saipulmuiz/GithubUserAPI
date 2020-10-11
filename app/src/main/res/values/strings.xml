@@ -1,9 +1,8 @@
 <resources>
     <string name="app_name">GithubUserAPI</string>
     <string name="search">Cari</string>
-    <string name="insert_user">Cari Username...</string>
+    <string name="insert_user">Cari Username…</string>
     <string name="search_result">Search Result</string>
-    <string name="total_hasil">Total Hasil :</string>
     <string name="nol">0</string>
     <string name="id">ID :</string>
     <string name="id_number">ID Number</string>
@@ -14,8 +13,20 @@
     <string name="n_a">N/A</string>
     <string name="followers">Followers</string>
     <string name="following">Following</string>
+    <string name="user_success">User Berhasil ditambahkan</string>
+    <string name="user_deleted">User Berhasil dihapus</string>
+    <string name="no_data_available">Tidak ada data yang tersedia</string>
+    <string name="reminder">Pengingat</string>
+    <string name="reminder_time">Pengingat jam 9:00 AM</string>
+    <string name="reminder_title">Pengingat</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="developer_name">By Saipul Muiz</string>
+    <string name="favorite_user">Favorite User</string>
+    <string name="cari_user_github">Cari User di Github..</string>
+    <string name="alarm_enabled">Alarm telah diaktifkan</string>
+    <string name="alarm_canceled">Alarm telah di nonaktifkan</string>
+    <string name="settings">Pengaturan</string>
+    <string name="exit_notif">Tekan sekali lagi untuk keluar!</string>
 </resources>
